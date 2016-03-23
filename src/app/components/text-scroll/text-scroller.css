@@ -1,0 +1,116 @@
+/* custom bar code animate styles */
+.bar-code-content {
+    width: 600px;
+    height: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-code-content ul {
+    position: absolute;
+    left: 25%;
+    bottom: -30px;
+    margin: 0;
+}
+
+.bar-code-content ul li {
+    list-style: none;
+    height: 30px;
+    color: #bf0d0d;
+    text-align: center;
+}
+
+.bar-code-content ul li span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+text-scroller {
+    display: block;
+    margin-left: -55px;
+}
+
+.bar-code-content ul li:last-child {
+    animation: font_scale 0.5s ease;
+    -webkit-animation: font_scale 0.5s ease;
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+@keyframes font_scale {
+    from {
+        transform: scale(1);
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+}
+
+.bar-code-content ul li:nth-last-child(2) {
+    animation: second_scale 0.5s ease;
+    -webkit-animation: second_scale 0.5s ease;
+    transform: skewX(-15deg) scale(1.2);
+    -ms-transform: skewX(-15deg) scale(1.2);
+    -moz-transform: skewX(-15deg) scale(1.2);
+    -webkit-transform: skewX(-15deg) scale(1.2);
+    -o-transform: skewX(-15deg) scale(1.2);
+    opacity: 0.7;
+}
+
+@keyframes second_scale {
+    from {
+        transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+    to {
+        transform: skewX(-15deg) scale(1.2);
+        -ms-transform: skewX(-15deg) scale(1.2);
+        -moz-transform: skewX(-15deg) scale(1.2);
+        -webkit-transform: skewX(-15deg) scale(1.2);
+        -o-transform: skewX(-15deg) scale(1.2);
+    }
+}
+
+.bar-code-content ul li:nth-last-child(3) {
+    animation: third_scale 0.5s ease;
+    -webkit-animation: third_scale 0.5s ease;
+    transform: skewX(-30deg) scale(1);
+    -ms-transform: skewX(-30deg) scale(1);
+    -moz-transform: skewX(-30deg) scale(1);
+    -webkit-transform: skewX(-30deg) scale(1);
+    -o-transform: skewX(-30deg) scale(1);
+    opacity: 0.6;
+}
+
+@keyframes third_scale {
+    from {
+        transform: skewX(-15deg) scale(1.2);
+        -ms-transform: skewX(-15deg) scale(1.2);
+        -moz-transform: skewX(-15deg) scale(1.2);
+        -webkit-transform: skewX(-15deg) scale(1.2);
+        -o-transform: skewX(-15deg) scale(1.2);
+    }
+    to {
+        transform: skewX(-30deg) scale(1);
+        -ms-transform: skewX(-30deg) scale(1);
+        -moz-transform: skewX(-30deg) scale(1);
+        -webkit-transform: skewX(-30deg) scale(1);
+        -o-transform: skewX(-30deg) scale(1);
+    }
+}
