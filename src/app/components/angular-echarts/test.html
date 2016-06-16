@@ -1,0 +1,76 @@
+/**
+vm.configBar = {
+    title: '单品种抗生素排名前十厂家',
+    subtitle: '',
+    showXAxis: true,
+    showYAxis: true,
+    showLegend: true,
+    forceClear: true,
+    formatXLabel: true
+};
+
+var datapoints = [];
+angular.forEach(item.manufacturers, function (v) {
+    var datapoint = {x: v.manufacturer, y: v.quantity};
+    datapoints.push(datapoint);
+});
+var pageload = {
+    name: '',
+    datapoints: datapoints
+};
+vm.multiple = [pageload];
+**/
+<bar-chart config="aa.configBar" data="aa.multiple"></bar-chart>
+
+/**
+vm.config = {
+    title: '',
+    subtitle: '',
+    showXAxis: true,
+    showYAxis: true,
+    showLegend: true,
+    stack: false,
+    forceClear: true
+};
+
+var pageload = {
+    name: '本机构',
+    datapoints: datapoints
+};
+var firstPaint = {
+    name: '全市',
+    datapoints: bdatapoints
+};
+vm.multiple = [pageload, firstPaint];
+**/
+<line-chart config="lg.config" data="lg.multiple" style="width: 100%;height: 600px;"></line-chart>
+
+/**
+vm.configPie = {
+    title: {
+        text: '抗生素前十饼状图',
+        x: 'center',
+        textStyle: {
+            color: '#000',
+            fontWeight: 'bold'
+        }
+    },
+    radius: '60%',
+    center: ['45%', '58%'],
+    forceClear: true
+};
+var data = {
+    name: '前十排名',
+    datapoints: []
+};
+angular.forEach(vm.topList, function (v) {
+    data.datapoints.push({
+        y: v.quantity,
+        x: v.productName
+    });
+    $timeout(function () {
+        vm.pieData = [data];
+    }, 0);
+});
+**/
+<pie-chart config="ta.configPie" data="ta.pieData"></pie-chart>
