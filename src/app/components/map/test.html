@@ -1,0 +1,195 @@
+<style>
+    /* map styles */
+    #map-container {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        border: 1px solid gray;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    #map-container #map-content {
+        width: 600px;
+        height: 400px;
+    }
+
+    #map-container #top-content {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        background: transparent;
+        opacity: 0.3;
+    }
+    #map-container #top-content:hover{
+        opacity: 0.8;
+    }
+
+    #map-container #top-content ul {
+        padding: 5px 10px;
+        margin: 0;
+        list-style: none;
+        background-color: rgba(0, 138, 205, 0.8);
+    }
+
+    #map-container #top-content ul li {
+        color: #000;
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    #map-container #top-content ul li:hover {
+        cursor: pointer;
+    }
+
+    #map-container #map-container svg path {
+        fill-opacity: 0;
+    }
+</style>
+<script>
+    vm.cities = [
+        {
+            "id": 2417,
+            "name": "绵阳市"
+        },
+        {
+            "id": 2425,
+            "name": "平武县"
+        },
+        {
+            "id": 2426,
+            "name": "江油市"
+        },
+        {
+            "id": 2422,
+            "name": "安县"
+        },
+        {
+            "id": 2423,
+            "name": "梓潼县"
+        },
+        {
+            "id": 2418,
+            "name": "涪城区"
+        },
+        {
+            "id": 2424,
+            "name": "北川羌族自治县"
+        },
+        {
+            "id": 2419,
+            "name": "游仙区"
+        },
+        {
+            "id": 2420,
+            "name": "三台县"
+        },
+        {
+            "id": 2421,
+            "name": "盐亭县"
+        }
+    ];
+    vm.locations = [
+        {
+            "name": "绵阳市中心医院",
+            "address": "地址1",
+            "location": {
+                "longitude": "104.759304",
+                "latitude": "31.4634"
+            }
+
+        },
+        {
+            "name": "绵阳市人民医院",
+            "address": "地址2",
+            "location": {
+                "longitude": "104.754988",
+                "latitude": "31.474015"
+            }
+
+        },
+        {
+            "name": "江油市医院",
+            "address": "地址3",
+            "location": {
+                "longitude": "104.745237",
+                "latitude": "31.779599"
+            }
+
+        },
+        {
+            "name": "三台县中医院",
+            "address": "地址4",
+            "location": {
+                "longitude": "105.098082",
+                "latitude": "31.091957"
+            }
+
+        },
+        {
+            "name": "三台县人民医院",
+            "address": "地址5",
+            "location": {
+                "longitude": "105.099807",
+                "latitude": "31.09794"
+            }
+        },
+        {
+            "name": "梓潼县医院",
+            "address": "地址6",
+            "location": {
+                "longitude": "105.17574",
+                "latitude": "31.638117"
+            }
+        },
+        {
+            "name": "梓潼县工人医院",
+            "address": "地址7",
+            "location": {
+                "longitude": "105.168213",
+                "latitude": "31.64357"
+            }
+        },
+        {
+            "name": "梓潼县中医院",
+            "address": "地址8",
+            "location": {
+                "longitude": "105.162306",
+                "latitude": "31.642255"
+            }
+        },
+        {
+            "name": "汉江医院",
+            "address": "地址9",
+            "location": {
+                "longitude": "105.164947",
+                "latitude": "31.625769"
+            }
+        },
+        {
+            "name": "禹里乡中心卫生院",
+            "address": "地址10",
+            "location": {
+                "longitude": "104.324183",
+                "latitude": "31.868604"
+            }
+        },
+        {
+            "name": "安县人民医院",
+            "address": "地址11",
+            "location": {
+                "longitude": "104.571909",
+                "latitude": "31.545299"
+            }
+        },
+        {
+            "name": "安县妇幼保健院",
+            "address": "地址12",
+            "location": {
+                "longitude": "104.55273",
+                "latitude": "31.547407"
+            }
+        }
+    ];
+</script>
+<jfy-map cities="ta.cities" locations="ta.locations"></jfy-map>
